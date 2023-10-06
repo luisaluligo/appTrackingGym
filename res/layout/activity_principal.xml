@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#9F9AAA "
+    android:backgroundTint="#D8D0E6"
+    tools:context=".PrincipalActividad">
+
+    <TextView
+        android:id="@+id/txtNameUsu"
+        android:layout_width="223dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="52dp"
+        android:ems="10"
+        android:hint="Usuario"
+        android:inputType="text"
+        android:textSize="20dp"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/btn_registroMedidad"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <Button
+        android:id="@+id/btn_registroMedidad"
+        android:layout_width="175dp"
+        android:layout_height="54dp"
+        android:onClick="InvocaMedidasAlumno"
+        android:text="Registrar Medidas"
+        app:layout_constraintBottom_toTopOf="@+id/btn_registro"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.508"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtNameUsu"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <Button
+        android:id="@+id/btn_registro"
+        android:layout_width="179dp"
+        android:layout_height="51dp"
+        android:onClick="InvocaRegistroAlumno"
+        android:text="Registrar Alumno"
+        app:layout_constraintBottom_toTopOf="@+id/btn_consultaalumnos"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.517"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_registroMedidad"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <Button
+        android:id="@+id/btn_seguimiento"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="120dp"
+        android:onClick="InvocaSeguimientoAlumno"
+        android:text="Seguimiento Alumno"
+        app:layout_constraintBottom_toTopOf="@+id/salir"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.51"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btn_consultaalumnos"
+        android:layout_width="182dp"
+        android:layout_height="48dp"
+        android:onClick="InvocaConsultaAlumno"
+        android:text="Consulta Alumnos"
+
+        app:layout_constraintBottom_toTopOf="@+id/btn_seguimiento"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_registro"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <Button
+        android:id="@+id/salir"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="40dp"
+        android:onClick="Salir"
+        android:text="Salir"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

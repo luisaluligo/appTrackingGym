@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#9F9AAA "
+    android:backgroundTint="#D8D0E6"
+    tools:context=".ConsultaAlumnos">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp">
+
+        <EditText
+            android:id="@+id/editTextNombreBusqueda"
+            android:layout_width="377dp"
+            android:layout_height="69dp"
+            android:hint="Ingrese el nombre del alumno" />
+
+        <Button
+            android:id="@+id/buttonBuscar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/editTextNombreBusqueda"
+            android:onClick="buscarAlumno"
+            android:layout_marginTop="16dp"
+            android:text="Buscar" />
+
+        <TextView
+            android:id="@+id/textViewNombre"
+            android:textSize="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/buttonBuscar"
+            android:layout_marginTop="16dp" />
+
+        <TextView
+            android:id="@+id/textViewEdad"
+            android:textSize="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textViewNombre"
+            android:layout_marginTop="8dp" />
+
+        <TextView
+            android:id="@+id/textViewCondFisicas"
+            android:layout_width="wrap_content"
+            android:textSize="20dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textViewEdad"
+            android:layout_marginTop="8dp" />
+
+        <TextView
+            android:id="@+id/textViewPatologias"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textViewCondFisicas"
+            android:textSize="20dp"
+            android:layout_marginTop="8dp" />
+        <LinearLayout
+            android:id="@+id/linearLayoutMedidas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:textSize="20dp"
+            android:layout_below="@id/textViewPatologias"
+            android:layout_marginTop="8dp">
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

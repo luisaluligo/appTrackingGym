@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#9F9AAA "
+    android:backgroundTint="#D8D0E6"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="121dp"
+        android:layout_height="27dp"
+        android:layout_marginTop="32dp"
+        android:text="Login"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display4"
+        android:textColor="#F0630573"
+        android:textColorHint="#837BB1"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewLabel"
+        android:layout_width="159dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="36dp"
+        android:labelFor="@id/spn_usu"
+        android:text="@string/cual_es_tu_usuario"
+        android:textColor="#A342066C"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.42"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageButton9"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/editTextPass"
+        style="@style/Widget.Material3.TextInputEditText.OutlinedBox.Dense"
+        android:layout_width="270dp"
+        android:layout_height="58dp"
+        android:layout_marginTop="32dp"
+        android:backgroundTint="#9F95D5"
+        android:ems="10"
+        android:hint="Clave Usuario"
+        android:inputType="textPassword"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/btnlogin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.555"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spn_usu"
+        app:layout_constraintVertical_bias="0.019" />
+
+    <Spinner
+        android:id="@+id/spn_usu"
+        android:layout_width="241dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="28dp"
+        android:backgroundTint="#9F95D5"
+        android:backgroundTintMode="add"
+        android:popupBackground="@color/white"
+        android:textColor="#F0470C51"
+        android:textColorHint="#493B98"
+        android:theme="@style/Widget.AppCompat.TextView.SpinnerItem"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewLabel"
+        tools:ignore="MissingConstraints" />
+
+    <ImageButton
+        android:id="@+id/imageButton9"
+        android:layout_width="125dp"
+        android:layout_height="75dp"
+        android:layout_marginTop="36dp"
+        android:contentDescription="Description for your image button"
+        android:onClick="InvocaRegistroUsuario"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:srcCompat="@drawable/registrarselog" />
+
+    <Button
+        android:id="@+id/btnlogin"
+        android:layout_width="115dp"
+        android:layout_height="77dp"
+        android:layout_marginBottom="132dp"
+        android:onClick="Ingresar"
+        android:text="Ingresar"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.523"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

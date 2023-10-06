@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#9F9AAA "
+    android:backgroundTint="#D8D0E6"
+    tools:context=".SeguimientoAlumnos">
+
+
+
+
+    <LinearLayout
+        android:layout_width="394dp"
+        android:layout_height="751dp"
+        android:orientation="vertical"
+        android:padding="40dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.476"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.473">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="200dp"
+            android:layout_height="52dp"
+            android:text="Seguimiento Alumno"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            />
+
+
+        <EditText
+            android:id="@+id/editTextNombreAlumno"
+            android:layout_width="match_parent"
+
+            android:layout_height="52dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:hint="Nombre Alumno" />
+
+        <Button
+            android:id="@+id/buttonBuscarAlumno"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="12dp"
+            android:onClick="buscarAlumno"
+            android:text="Buscar Alumno" />
+
+
+        <Spinner
+            android:id="@+id/spinnerMeses"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_below="@id/buttonBuscarAlumno"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp" />
+
+        <Spinner
+            android:id="@+id/spnMedidas"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTextText" />
+
+
+        <TextView
+            android:id="@+id/ediTxtUnMed"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ediTxtVlMed" />
+
+        <EditText
+            android:id="@+id/ediTxtVlMed"
+            android:layout_width="match_parent"
+            android:visibility="gone"
+            android:layout_height="52dp"
+            android:layout_below="@id/ediTxtUnMed"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:hint="Valor de la medida"
+            android:inputType="numberDecimal" />
+
+        <Button
+            android:id="@+id/buttonAgregarMedida"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ediTxtVlMed"
+            android:layout_alignParentEnd="true"
+            android:onClick="agregarMedidaTemporal"
+            android:text="Agregar Medida"
+            tools:layout_editor_absoluteX="169dp"
+            tools:layout_editor_absoluteY="530dp" />
+
+        <Button
+            android:id="@+id/btnGrabar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/buttonAgregarMedida"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:onClick="guardarMedidasEnSharedPreferences"
+            android:text="Guardar Medidas"
+            android:visibility="gone" />
+
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

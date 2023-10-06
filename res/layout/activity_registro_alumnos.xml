@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/btn_registrar"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#9F9AAA "
+    android:backgroundTint="#D8D0E6"
+    tools:context=".RegistroAlumnos">
+
+    <EditText
+        android:id="@+id/txtNombre"
+        android:layout_width="214dp"
+        android:layout_height="57dp"
+        android:hint="Nombre"
+        app:layout_constraintBottom_toTopOf="@+id/editTextNumEdad"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.543"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView10"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="175dp"
+        android:layout_height="67dp"
+        android:layout_marginTop="16dp"
+        android:text="Registro Alumno"
+        android:textSize="23dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextNumEdad"
+        android:layout_width="206dp"
+        android:layout_height="59dp"
+        android:ems="10"
+        android:hint="Edad"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/txtCondicionesFisicas"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.536"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtNombre"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <EditText
+        android:id="@+id/txtPatologias"
+        android:layout_width="207dp"
+        android:layout_height="55dp"
+        android:hint="Patologias"
+        app:layout_constraintBottom_toTopOf="@+id/spinnerMeses"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.539"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtCondicionesFisicas"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <Spinner
+        android:id="@+id/spinnerMeses"
+        android:layout_width="213dp"
+        android:layout_height="51dp"
+
+        android:layout_marginBottom="4dp"
+        android:ems="10"
+        android:hint="Fecha"
+        android:inputType="date"
+        app:layout_constraintBottom_toTopOf="@+id/editTextText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.54"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+    <EditText
+        android:id="@+id/txtCondicionesFisicas"
+        android:layout_width="205dp"
+        android:layout_height="65dp"
+        android:hint="Condiciones Fisicas"
+        app:layout_constraintBottom_toTopOf="@+id/txtPatologias"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.519"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextNumEdad"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <TextView
+        android:id="@+id/editTextText"
+        android:layout_width="237dp"
+        android:layout_height="37dp"
+        android:layout_marginTop="10dp"
+        android:text="Ingreso Medidas :"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/layoutMedidas"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/layoutMedidas"
+        android:layout_width="431dp"
+        android:layout_height="119dp"
+        android:layout_marginBottom="96dp"
+        android:gravity="center_horizontal"
+
+        app:layout_constraintBottom_toTopOf="@+id/botonGuardar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.761"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Spinner
+            android:id="@+id/spinnerMedidas"
+            android:layout_width="132dp"
+            android:layout_height="72dp"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTextText" />
+
+        <TextView
+            android:id="@+id/textViewUnidadMedida"
+            android:layout_width="99dp"
+            android:layout_height="80dp"
+
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/spinnerMedidas" />
+
+        <EditText
+            android:id="@+id/editTextValor"
+            android:layout_width="132dp"
+            android:layout_height="66dp"
+
+            android:hint="Valor"
+            android:inputType="numberDecimal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewUnidadMedida" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/botonGuardar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="52dp"
+        android:layout_marginBottom="40dp"
+        android:onClick="registrarAlumno"
+        android:text="Registrar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:onClick="Salir"
+        android:text="Volver"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/botonGuardar"
+        app:layout_constraintHorizontal_bias="0.392"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/botonAgregarMedida"
+        app:layout_constraintVertical_bias="0.636" />
+
+    <Button
+        android:id="@+id/botonAgregarMedida"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:onClick="agregarMedidaTemporal"
+        android:text="Agregar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.512"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layoutMedidas" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

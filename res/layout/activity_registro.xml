@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="#9F9AAA"
+    android:backgroundTint="#D8D0E6"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Registro">
+
+    <EditText
+        android:id="@+id/editTextClave"
+        android:layout_width="261dp"
+        android:layout_height="78dp"
+        android:layout_marginTop="28dp"
+        android:ems="10"
+        android:hint=" CONTRASEÑA"
+        android:inputType="textPassword"
+        android:textColor="#F0630573"
+        android:textColorHint="#837BB1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.406"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextUsu"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:text="REGISTRO USUARIO"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="#F0630573"
+        android:textColorHint="#B17B7B"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextClave2"
+        android:layout_width="264dp"
+        android:layout_height="69dp"
+        android:layout_marginTop="12dp"
+        android:ems="10"
+        android:hint=" CONTRASEÑA"
+        android:inputType="textPassword"
+        android:textColor="#F0630573"
+        android:textColorHint="#837BB1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.408"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextClave"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/editTextUsuNom"
+        android:layout_width="262dp"
+        android:layout_height="73dp"
+        android:layout_marginTop="40dp"
+        android:ems="10"
+        android:hint="USUARIO NOMBRE"
+        android:inputType="text"
+        android:textColor="#F0630573"
+        android:textColorHint="#837BB1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.401"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <EditText
+        android:id="@+id/editTextUsu"
+        android:layout_width="267dp"
+        android:layout_height="82dp"
+        android:layout_marginTop="40dp"
+        android:ems="10"
+        android:hint="USUARIO LOGIN"
+        android:inputType="text"
+        android:textColor="#F0630573"
+        android:textColorHint="#837BB1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.416"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextUsuNom" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="128dp"
+        android:onClick="Registrar"
+        android:text="REGISTRAR"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextClave2"
+        app:layout_constraintVertical_bias="1.0" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
